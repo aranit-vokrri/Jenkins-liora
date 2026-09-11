@@ -1,0 +1,6 @@
+services:
+  lioraapi:
+    image: ${DOCKER_IMAGE:-lioraapi:test}
+    container_name: lioraapi
+    ports:
+      - "8000:8000"

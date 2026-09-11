@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'aranit-vokrri/lioraapi'
+        IMAGE_NAME = 'aranit/lioraapi'
         TEST_CONTAINER = 'lioraapi-test'
     }
 
@@ -57,7 +57,7 @@ pipeline {
                     sh '''
                         echo "$DOCKER_HUB_PASS" |
                           docker login \
-                            --username aranit-vokrri \
+                            --username aranit \
                             --password-stdin
 
                         docker push ${IMAGE_NAME}:v.${BUILD_ID}.0
